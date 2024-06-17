@@ -32,18 +32,35 @@
       font-size: 24px;
       font-weight: bold;
       text-align: center;
-      bottom: 0%;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       background: rgba(0, 0, 0, 0.5); /* Optional: add background for better readability */
       padding: 10px; /* Optional: add padding for better readability */
       border-radius: 5px; /* Optional: add border radius for better appearance */
     }
+
+    /* Hide video controls */
+    video::-webkit-media-controls {
+      display: none !important;
+    }
+    video::-moz-media-controls {
+      display: none !important;
+    }
+    video::-ms-media-controls {
+      display: none !important;
+    }
+    video::-o-media-controls {
+      display: none !important;
+    }
+    video::media-controls {
+      display: none !important;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <video src="img/tik_tok_vid_1.mp4" controls autoplay></video>
+    <video src="img/tik_tok_vid_1.mp4" autoplay loop muted></video>
     <div class="txt">How can I put this text on the video.</div>
   </div>
 </body>
